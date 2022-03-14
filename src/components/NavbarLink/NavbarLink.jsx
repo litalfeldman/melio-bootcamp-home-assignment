@@ -12,7 +12,7 @@ export const NavbarLink = (props) => {
   };
 
   return (
-    <div onClick={handleClick}>
+    <div id = {isActive ? "active-nav-button" : "navbar-button"} onClick={handleClick}>
       {props.label}
     </div>
   );

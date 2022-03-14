@@ -6,6 +6,7 @@
 * */
 
 import {fetchCandidates} from "./API";
+import {transformCandidatesData} from "./helper"
 
 const runPlayground = async () => {
 
@@ -13,9 +14,16 @@ const runPlayground = async () => {
 
   // Add your logic here
 
+
+
+
   // An example of executing code from API.js file:
   const candidates = await fetchCandidates();
+  const filtered = transformCandidatesData(candidates);
+
+
   console.log("candidates data: ", candidates);
+  console.log("transformed data: ", filtered);
 
 }
 
