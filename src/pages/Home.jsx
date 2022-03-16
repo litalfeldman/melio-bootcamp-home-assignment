@@ -61,7 +61,10 @@ export const Home = () => {
       </div>
       <div className="candidates-list">
         {
-          Object.values(candidates).flatMap(candidateArray => candidateArray.map(candidate =><div key={candidate.uuid}> <Card onCardClick={updateFavorites} candidate={candidate}/></div>))
+          Object.values(candidates).flatMap(candidateArray => candidateArray.map(candidate =>
+          <div key={candidate.uuid}> 
+            <Card onCardClick={updateFavorites} candidate={candidate}/>
+          </div>))
         }
       </div>
     </div>

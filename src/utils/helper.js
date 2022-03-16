@@ -27,22 +27,22 @@ const sortObjectsByKey = (unordered) => {
 }
 
 export const transformCandidatesData = (data) => {
-  const results = data.results
-
-  const filteredResults = results.map(candidate => 
+  const filteredResults = data.map(candidate => 
       { 
-        const { location, name, picture, login, email } = candidate; 
-        const newCandidate = {};
-        newCandidate.firstName = name.first;
-        newCandidate.lastName = name.last;
-        newCandidate.email = email;
-        newCandidate.city = location.city;
-        newCandidate.country = location.country;
-        newCandidate.picture = picture.large;
-        newCandidate.uuid = login.uuid;
-        newCandidate.isFavorite = false;
-        newCandidate.isPreferred = location.country == ('United States' || 'United Kingdom');
-        return newCandidate;
+        const { location, name, picture, login, email } = candidate;
+        const { first, last } = name;
+        const { city, country } = location;
+        return {
+          firstName: first,
+          lastName: last,
+          picture: picture.large,
+          uuid: login.uuid,
+          email,
+          city,
+          country,
+          isFavorite: false,
+          isPreferred: country === ('United States' || 'United Kingdom'),
+        }
       }
     )
   const keyedByFirstName = groupBy(filteredResults, 'firstName');
