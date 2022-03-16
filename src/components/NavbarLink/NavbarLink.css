@@ -1,0 +1,32 @@
+#navbar-button {
+    color: black;
+    padding-right: 20px;
+    font-weight:500;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+#navbar-button:hover {
+    color: #7849FF;
+}
+
+#active-nav-button {
+    color: #7849FF;
+    padding-right: 20px;
+    font-weight:500;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 768px) {
+
+    #navbar-button {
+        font-size: 15px;
+        font-weight: 600;
+    }
+
+    #active-nav-button {
+        font-size: 15px;
+        font-weight: 600;
+    }
+}

@@ -1,0 +1,94 @@
+#page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: calc(100vh - 90px);
+}
+
+.page-title { 
+  font-size: 34px;
+  font-weight: 800;
+  margin-top: 50px;
+}
+
+.page-subtitle {
+  margin-top: 5px;
+  font-size: 15px;
+  font-size: 18px;
+  color: rgb(131, 126, 126);
+}
+
+.candidates-list {
+  margin-block-start: 30px;
+  overflow: scroll;
+  height: 100%; 
+  width: 50%;
+}
+
+.no-favorites {
+  display: flex;
+  color: rgb(131, 126, 126);
+  font-size: 15px;
+  align-items: center;
+  justify-content: center;
+  height: 50%;
+}
+
+.container {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: start ;
+  width: 40%;
+  height: 180px;
+}
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  .candidates-list {
+    width: 100%;
+    height: 100%;
+  }
+
+  .page-title { 
+    font-size: 30px;
+  }
+
+  .page-subtitle {
+    font-size: 14px;
+  }
+
+  .container {
+    width: 82%;
+    height: 20%;
+    align-items: center ;
+    /* height: 150px; */
+  }
+}
+
+.candidates-list::-webkit-scrollbar {
+  width: 15px;
+  height: 100%;
+  background-color: #fafafa; 
+} 
+
+/* background of the scrollbar except button or resizer */
+.candidates-list::-webkit-scrollbar-track {
+  background-color: #fafafa; 
+}
+
+/* scrollbar itself */
+.candidates-list::-webkit-scrollbar-thumb {
+  background-color: #7a7a7a;
+  border-radius: 13px;
+  border: 4px solid #fff;;
+}
+
+/* set button (top and bottom of the scrollbar) */
+.candidates-list::-webkit-scrollbar-button {
+  display:none;
+}
+
+
+  
